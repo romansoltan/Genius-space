@@ -1,4 +1,5 @@
-/* ========= 1:00:51 ========== */
+/* 1:18:25 */
+/* ========= Fonts ========== */
 
 @font-face {
   font-display: swap;
@@ -28,6 +29,8 @@
   src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
 }
 
+/* ========= Fonts ========== */
+
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
@@ -35,19 +38,52 @@
   --color-brand-light: #819b57;
 }
 /* ======== Base ======== */
+* {
+  box-sizing: border-box;
+}
 body {
   color: var(--color-primary-dark);
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 address {
   font-style: normal;
 }
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.section {
+  padding: 48px 0;
+}
+.container {
+  width: 100%;
+  max-width: 1288px; /*додаються падінги з контейнера*/
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ======== Base ======== */
 /* ======== Link ======== */
 .link {
   color: var(--color-primary-light);
@@ -58,7 +94,6 @@ ul {
 .link:hover,
 .link:focus {
   color: var(--color-brand-light);
-  font-weight: 600;
 }
 /* ======== Button ======== */
 .button {
@@ -77,25 +112,54 @@ ul {
   color: var(--color-brand-dark);
   background-color: transparent;
 }
+/* ======== Header ======== */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+/* ======== Header ======== */
 
 /* ======== Hero section ======== */
+.hero-section {
+  padding: 272px 0;
+}
 .hero-title {
   color: var(--color-primary-light);
   font-weight: 900;
   font-size: 128px;
   text-align: center;
+  margin-bottom: 0;
 }
 .hero-title .accent {
   color: var(--color-brand-light);
 }
 /* ======== Hero section ======== */
 
-/* ======== Traditions section ======== */
-.advantages-list {
-  color: var(--color-primary-light);
+/* ======== Advantages section ======== */
+.advantages-section {
+  padding: 16px 0;
   background-color: var(--color-brand-light);
 }
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
 .advantages-item {
+  color: var(--color-primary-light);
   font-size: 20px;
   font-weight: 300;
 }
@@ -107,6 +171,23 @@ ul {
 .section-title .accent {
   color: var(--color-brand-dark);
 }
+/* ======== Advantages section ======== */
+
+/* ======== Traditions section ======== */
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.traditions-content {
+  max-width: 710px;
+}
+.traditions-title {
+  margin-bottom: 42px;
+}
 .traditions-text .brand {
   color: var(--color-brand-light);
   font-weight: 600;
@@ -114,12 +195,19 @@ ul {
 .traditions-text .uppercase {
   text-transform: uppercase;
 }
+.traditions-text.limited {
+  max-width: 340px;
+}
 
 /* ======== Traditions section ======== */
 
 /* ======== Chefs section ======== */
 
+.chefs-title {
+  margin-bottom: 80px;
+}
 .chef-title {
+  margin-bottom: 16px;
   font-weight: 600;
   font-size: 40px;
 }
@@ -128,6 +216,22 @@ ul {
 
 /* ======== Formats section ======== */
 
+.formats-title {
+  margin-bottom: 80px;
+}
+.formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3); 
+}
+.format-card {
+  padding: 24px;
+  border: 1px solid lightgray; /* remove */
+  border-radius: 16px;
+}
 .format-title {
   font-weight: 600;
   font-size: 24px;
@@ -144,14 +248,19 @@ ul {
 
 /* ======== Contact section ======== */
 
+.contact-title {
+  margin-bottom: 16px;
+}
+
 /* ======== Contact section ======== */
 
 /* ======== Footer ======== */
 
 .address-link {
+  color: var(--color-primary-light);
   font-weight: 300;
   font-size: 16px;
-  color: var(--color-primary-light);
+  text-decoration: none;
 }
 .address-link:hover,
 .address-link:focus {
