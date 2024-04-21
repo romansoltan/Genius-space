@@ -1,4 +1,4 @@
-/* 1:18:25 */
+/* 24:00 */
 /* ========= Fonts ========== */
 
 @font-face {
@@ -135,6 +135,10 @@ ul {
 /* ======== Hero section ======== */
 .hero-section {
   padding: 272px 0;
+  background-image: url('../images/hero-section-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 .hero-title {
   color: var(--color-primary-light);
@@ -225,7 +229,7 @@ ul {
   gap: 20px;
 }
 .formats-item {
-  flex-basis: calc((100% - 40px) / 3); 
+  flex-basis: calc((100% - 40px) / 3);
 }
 .format-card {
   padding: 24px;
@@ -272,4 +276,12 @@ ul {
   color: #a18268;
 }
 
+/* ======== Footer ======== */
+.footer {
+background-color: var(--color-primary-dark);
+background-image: url('../images/footer-bg.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
 /* ======== Footer ======== */
