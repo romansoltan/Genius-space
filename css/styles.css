@@ -1,4 +1,4 @@
-/* 24:00 */
+/* 45:00 */
 /* ========= Fonts ========== */
 
 @font-face {
@@ -235,6 +235,12 @@ ul {
   padding: 24px;
   border: 1px solid lightgray; /* remove */
   border-radius: 16px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
 }
 .format-title {
   font-weight: 600;
@@ -278,10 +284,10 @@ ul {
 
 /* ======== Footer ======== */
 .footer {
-background-color: var(--color-primary-dark);
-background-image: url('../images/footer-bg.png');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+  background-color: var(--color-primary-dark);
+  background-image: url('../images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 /* ======== Footer ======== */
