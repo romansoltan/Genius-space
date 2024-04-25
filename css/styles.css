@@ -1,4 +1,4 @@
-/* 45:00 */
+/* 27:27 */
 /* ========= Fonts ========== */
 
 @font-face {
@@ -288,7 +288,13 @@ ul {
 /* ======== Contact section ======== */
 
 /* ======== Footer ======== */
-
+.footer {
+  background-color: var(--color-primary-dark);
+  background-image: url('../images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .address-link {
   color: var(--color-primary-light);
   font-weight: 300;
@@ -300,17 +306,16 @@ ul {
   color: var(--color-brand-normal);
   text-decoration: none;
 }
+.address-icon {
+  fill: var(--color-primary-light);
+  /* stroke: red; обводка */
+}
+.address-icon:hover,
+.address-icon:focus {
+  fill: var(--color-brand-normal);
+}
 .address-copyright {
   font-size: 14px;
-  color: #a18268;
-}
-
-/* ======== Footer ======== */
-.footer {
-  background-color: var(--color-primary-dark);
-  background-image: url('../images/footer-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  color: var(--color-secondary-dark);
 }
 /* ======== Footer ======== */
