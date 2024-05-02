@@ -1,36 +1,32 @@
-/* 33:00 */
+/* : */
 /* ========= Fonts ========== */
-
 @font-face {
   font-display: swap;
   font-family: 'Poppins';
   font-weight: 300;
   src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Poppins';
   font-weight: 400;
   src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Poppins';
   font-weight: 600;
   src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Poppins';
   font-weight: 900;
   src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
 }
-
 /* ========= Fonts ========== */
 
+/* ========= Variables ========== */
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
@@ -39,8 +35,12 @@
   --color-brand-normal: #819b57;
   --color-brand-light: #cfcfbc;
 }
+/* ========= Variables ========== */
+
 /* ======== Base ======== */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
@@ -60,6 +60,9 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+a {
+  display: inline-block;
 }
 address {
   font-style: normal;
@@ -87,6 +90,7 @@ ul {
   padding: 0 24px;
 }
 /* ======== Base ======== */
+
 /* ======== Link ======== */
 .link {
   color: var(--color-primary-light);
@@ -98,6 +102,7 @@ ul {
 .link:focus {
   color: var(--color-brand-normal);
 }
+
 /* ======== Button ======== */
 .button {
   color: var(--color-primary-light);
@@ -115,6 +120,7 @@ ul {
   color: var(--color-brand-dark);
   background-color: transparent;
 }
+
 /* ======== Header ======== */
 .header {
   background-color: lightgray; /* remove */
@@ -211,11 +217,9 @@ ul {
 .traditions-text.limited {
   max-width: 340px;
 }
-
 /* ======== Traditions section ======== */
 
 /* ======== Chefs section ======== */
-
 .chefs-title {
   max-width: 532px;
   margin: 0 auto 80px;
@@ -229,7 +233,8 @@ ul {
 }
 .chefs-list {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 40px 30px;
 }
 .chefs-item {
   flex-basis: calc((100% - 30px) / 2);
@@ -248,11 +253,15 @@ ul {
   font-weight: 600;
   font-size: 40px;
 }
-
+.chef-text p {
+  margin-bottom: 24px;
+}
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
 /* ======== Chefs section ======== */
 
 /* ======== Formats section ======== */
-
 .formats-title {
   margin-bottom: 80px;
 }
@@ -293,7 +302,6 @@ ul {
 }
 
 /* ======== Carousel ======== */
-
 .carousel-button {
   display: flex;
   align-items: center;
@@ -313,9 +321,7 @@ ul {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-light);
 }
-
 /* ======== Carousel ======== */
-
 /* ======== Formats section ======== */
 
 /* ======== Contact section ======== */
@@ -326,8 +332,7 @@ ul {
   display: flex;
   gap: 32px;
 }
-/* .contact-form {
-} */
+/* .contact-form {} */
 .contact-title {
   margin-bottom: 16px;
 }
@@ -345,6 +350,25 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 32px 0;
+}
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+.address-list,
+.address-info {
+  flex-grow: 1;
 }
 .address-link {
   color: var(--color-primary-light);
