@@ -1,4 +1,4 @@
-/* : */
+/* 1:03:00 */
 /* ========= Fonts ========== */
 @font-face {
   font-display: swap;
@@ -221,15 +221,22 @@ ul {
 
 /* ======== Chefs section ======== */
 .chefs-title {
-  max-width: 532px;
+  position: relative;
   margin: 0 auto 80px;
 }
 .chefs-title::before,
 .chefs-title::after {
-  display: block;
+  position: absolute;
+  bottom: 24px;
   width: 352px;
-  border: 2px solid var(--color-primary-light);
+  border: 2px solid var(--color-brand-light);
   content: '';
+}
+.chefs-title::before {
+  left: 0;
+}
+.chefs-title::after {
+  right: 0;
 }
 .chefs-list {
   display: flex;
@@ -345,12 +352,32 @@ ul {
 
 /* ======== Footer ======== */
 .footer {
+  position: relative;
   background-color: var(--color-primary-dark);
   background-image: url('../images/footer-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 32px 0;
+}
+.footer::before,
+.footer::after {
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  content: '';
+}
+.footer::before {
+  width: 180px;
+  height: 120px;
+  left: 0;
+  background-image: url('../images/decor-bread-small.png');
+}
+.footer::after {
+  width: 380px;
+  height: 190px;
+  right: 0;
+  background-image: url('../images/decor-bread-large.png');
 }
 .footer-container {
   display: flex;
