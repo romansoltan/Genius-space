@@ -32,7 +32,9 @@
             </ul>
           </nav>
           <!-- замовити дзвінок -->
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="button modal-btn-open" type="button">
+            Замовити дзвінок
+          </button>
         </div>
       </div>
     </header>
@@ -86,7 +88,7 @@
       <section class="section" id="chefs-section">
         <div class="container">
           <h2 class="chefs-title section-title centered">
-            Наші найкращі <br>
+            Наші найкращі <br />
             <span class="accent">шеф-кухарі</span>
           </h2>
           <ul class="chefs-list">
@@ -129,9 +131,7 @@
                       <span lang="en">SHOP BAKERY</span> - це наша любов, з якою
                       ми ділимось кожен раз з Вами через нашу випічку!
                     </p>
-                    <p>
-                      Я зроблю для вас унікальну начинку на будь який смак!
-                    </p>
+                    <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
                   </div>
                 </div>
               </article>
@@ -293,5 +293,14 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

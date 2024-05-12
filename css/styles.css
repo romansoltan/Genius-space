@@ -352,13 +352,13 @@ ul {
 
 /* ======== Footer ======== */
 .footer {
+  padding: 32px 0;
   position: relative;
   background-color: var(--color-primary-dark);
   background-image: url('../images/footer-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 32px 0;
 }
 .footer::before,
 .footer::after {
@@ -421,3 +421,34 @@ ul {
   color: var(--color-secondary-dark);
 }
 /* ======== Footer ======== */
+
+/* ======== Modal ======== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(49, 38, 26, 0.4);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+}
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+/* ======== Modal ======== */
