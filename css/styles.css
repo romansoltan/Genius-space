@@ -1,4 +1,4 @@
-/* 45:00 */
+/* 18:32 */
 /* ========= Fonts ========== */
 @font-face {
   font-display: swap;
@@ -120,6 +120,12 @@ ul {
   color: var(--color-brand-dark);
   background-color: transparent;
 }
+/* .button:disabled {
+  color: gray;
+  background-color: lightgray;
+  border-color: currentColor;
+  cursor: not-allowed;
+} */
 
 /* ======== Header ======== */
 .header {
@@ -361,6 +367,7 @@ ul {
   margin-bottom: 16px;
 }
 .contact-map {
+  flex-basis: 594px;
   flex-shrink: 0;
   border: none;
   border-radius: 16px;
@@ -464,12 +471,91 @@ ul {
   max-width: 880px;
   height: 100%;
   max-height: 880px;
+  padding: 128px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
+  overflow-y: auto;
 }
 .modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
 }
+
+/* ======== Form ======== */
+.form-field {
+  margin-bottom: 32px;
+}
+.form-label {
+  left: 42px;
+  top: 16px;
+}
+/* .form-field:focus-within .form-label {
+  transform: translate(-36px, -40px);
+} */
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 8px;
+  background-color: transparent;
+}
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+.form-terms {
+  margin: 0 auto;
+  max-width: 210px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
+}
+/* ======== Form ======== */
 /* ======== Modal ======== */
+
+/* .checkbox {
+  position: relative;
+}
+.checkbox-input {
+  appearance: none;
+  заховали checkbox (appearance - зовнішній вигляд)
+}
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: #465929;
+  background-image: url('');
+  можна завантажити іконку до checkbox
+}
+.checkbox-label {
+  padding-left: 24px;
+}
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 2px;
+  content: '';
+} */
