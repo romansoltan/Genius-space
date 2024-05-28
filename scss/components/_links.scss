@@ -1,0 +1,11 @@
+/* ======== Link ======== */
+.link {
+  color: var(--color-primary-light);
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.link:hover,
+.link:focus {
+  color: var(--color-brand-normal);
+}
