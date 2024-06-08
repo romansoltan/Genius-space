@@ -1,18 +1,20 @@
 /* ======== Formats section ======== */
-.formats-title {
-  margin-bottom: 80px;
-}
-.formats-container {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.formats-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.formats-item {
-  flex-basis: calc((100% - 40px) / 3);
+.formats-section {
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 40px) / 3);
+  }
 }
 /* ======== Formats section ======== */

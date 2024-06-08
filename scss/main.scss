@@ -4,11 +4,13 @@
 @import './utils/utils';
 @import './utils/mixin';
 @import './utils/texts.scss';
+
 @import './components/buttons';
-@import './components/links';
 @import './components/carousel-button';
 @import './components/chef-card';
 @import './components/format-card';
+@import './components/links';
+
 @import './layout/header';
 @import './layout/hero-section';
 @import './layout/advantages-section';
