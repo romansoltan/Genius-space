@@ -15,11 +15,18 @@
     margin-bottom: 24px;
   }
 
+  &__button {
+    display: block;
+    margin: 0 auto 24px;
+  }
+
   &__map {
     flex-basis: 594px;
     flex-shrink: 0;
     border: none;
     border-radius: 16px;
   }
+
+  
 }
 /* ======== Contact section ======== */
