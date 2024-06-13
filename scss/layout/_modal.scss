@@ -11,12 +11,14 @@
   padding: 20px 0;
   background-color: rgba(49, 38, 26, 0.4);
   transition: opacity 0.4s, visibility 0.4s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 .modal {
   position: relative;
   width: 100%;
@@ -27,11 +29,21 @@
   background-color: var(--color-primary-light);
   border-radius: 32px;
   overflow-y: auto;
-}
-.modal-btn-close {
-  position: absolute;
-  top: 40px;
-  right: 40px;
+
+  &__btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  &__form-field {
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 24px;
+  }
 }
 
 /* ======== Modal ======== */
