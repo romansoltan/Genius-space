@@ -1,4 +1,3 @@
-/* ======== Footer ======== */
 .footer {
   padding: 32px 0;
   position: relative;
@@ -7,65 +6,88 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &::before {
+    width: 180px;
+    height: 120px;
+    left: 0;
+    background-image: url('../images/decor-bread-small.png');
+  }
+
+  &::after {
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url('../images/decor-bread-large.png');
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+    }
+  }
+
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+
+  &__address-list,
+  &__address-info {
+    flex-grow: 1;
+  }
+
+  &__address-link {
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-brand-normal);
+      text-decoration: none;
+    }
+  }
+
+  &__address-icon {
+    fill: var(--color-primary-light);
+    /* stroke: red; обводка */
+
+    &:hover,
+    &:focus {
+      fill: var(--color-brand-normal);
+    }
+  }
+
+  &__address-copyright {
+    font-size: 14px;
+    color: var(--color-secondary-dark);
+  }
 }
-.footer::before,
-.footer::after {
-  position: absolute;
-  bottom: 0;
-  background-repeat: no-repeat;
-  content: '';
-}
-.footer::before {
-  width: 180px;
-  height: 120px;
-  left: 0;
-  background-image: url('../images/decor-bread-small.png');
-}
-.footer::after {
-  width: 380px;
-  height: 190px;
-  right: 0;
-  background-image: url('../images/decor-bread-large.png');
-}
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
-.footer-nav,
-.footer-address {
-  display: flex;
-  flex-basis: 50%;
-  gap: 20px;
-}
-.footer-logo,
-.footer-menu {
-  flex-grow: 1;
-}
-.address-list,
-.address-info {
-  flex-grow: 1;
-}
-.address-link {
-  color: var(--color-primary-light);
-  font-weight: 300;
-  font-size: 16px;
-  text-decoration: none;
-}
-.address-link:hover,
-.address-link:focus {
-  color: var(--color-brand-normal);
-  text-decoration: none;
-}
-.address-icon {
-  fill: var(--color-primary-light);
-  /* stroke: red; обводка */
-}
-.address-icon:hover,
-.address-icon:focus {
-  fill: var(--color-brand-normal);
-}
-.address-copyright {
-  font-size: 14px;
-  color: var(--color-secondary-dark);
-}
-/* ======== Footer ======== */
