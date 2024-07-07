@@ -1,14 +1,28 @@
-/* ======== Contact section ======== */
 .contact-section {
   padding-bottom: 96px;
 
   &__container {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 
   &__title {
-    margin-bottom: 16px;
+    font-size: 36px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    color: var(--color-brand-dark);
   }
 
   &__form-field {
@@ -21,12 +35,22 @@
   }
 
   &__map {
-    flex-basis: 594px;
     flex-shrink: 0;
+    margin: 0 -24px;
+    height: 176px;
     border: none;
     border-radius: 16px;
-  }
 
-  
+    @media screen and (min-width: $bp-tablet) {
+      margin: auto;
+      width: 320px;
+      height: 595px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      // flex-basis: 594px;
+      width: 594px;
+      height: 595px;
+    }
+  }
 }
-/* ======== Contact section ======== */
